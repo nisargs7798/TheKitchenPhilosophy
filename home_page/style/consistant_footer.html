@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Consistant Footer</title>
+        <!--Link the stylesheet and don't forget to paste the meta clause below the style sheet-->
+        <link rel="stylesheet" href="consistant_footer.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+       
+        
+<!-------------------------------Paste the footer below into your page. Make sure that your pages are NOT using <footer> semantics------------------------------------------------->
+         <body>
+    
+            <footer class="footer">
+
+                <!---------------------------------------For Desktop and Pad---------------------------------------->
+                <div class="footerbig">
+                    <div class="footermenu" class="footerdiv">
+                        <p>NAV</p>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    
+                    </div>
+
+                    <div class="footercooked" class="footerdiv">
+                        <p>COOKED</p>
+                        <ul>
+                            <li><a href="#">Dumplings</a></li>
+                            <li><a href="#">Sweet and Sour Pork</a></li>
+                            <li><a href="#">COOKED3</a></li>
+                            <li><a href="#">COOKED4</a></li>
+                        </ul>
+                    </div>
+                        
+                    <div class="footeruncooked" class="footerdiv">
+                        <p>UNCOOKED</p>
+                        <ul class="footeruncooked1">         
+                            <li><a href="#">Carrot</a></li>
+                            <li><a href="#">Lychee</a></li>
+                            <li><a href="#">Carrot</a></li>
+                            <li><a href="#">Lychee</a></li>
+                        </ul>
+                    
+                        <ul class="footeruncooked2">
+                            <li><a href="#">Carrot</a></li>
+                            <li><a href="#">Lychee</a></li>
+                            <li><a href="#">Carrot</a></li>
+                            <li><a href="#">Lychee</a></li>
+                        </ul>
+                    </div>
+                
+
+                    <div class="footerreferences" class="footerdiv">
+                        <p>REFERENCES</p>
+                        <ul>
+                            <li><a href="http://www.google.ca">www.google.ca</a></li>
+                            <li><a href="http://www.google.ca">www.google.ca</a></li>
+                            <li><a href="http://www.google.ca">www.google.ca</a></li>
+                            <li><a href="http://www.google.ca">www.google.ca</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-----------------------------------For phone------------------------------------------------->
+                <div class="footersmall">  
+                    
+                    <div class="footerdropdown" class="footerdiv">
+                        <button class="footerbutton" class="footerbuttonmenu">Site Map</button>
+                        <ul class="footerfold" class="footerfoldmenu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Cooked</a></li>
+                            <li><a href="#">Uncooked</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Feedback</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Ref #1:<br/>www.google.ca</a></li>
+                            <li><a href="#">Ref #2:<br/>www.kijiji.ca</a></li>
+                            <li><a href="#">Ref #3:<br/>www.google.ca</a></li>
+                            <li><a href="#">Ref #4:<br/>www.kijiji.ca</a></li>
+                        </ul>         
+                    </div>
+
+                    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            $('button').click(function(){
+                                $('ul').toggleClass('active')
+                            })
+                        })
+                    </script>                    
+                
+                </div>
+                
+                <div class="footercopyright">
+                    <p class="footercopyrightToU"><a href="#">Terms of Use</a></p>
+                    <p class="footercopyrightPP"><a href="#">Privacy Policy</a></p>
+                    <p class="footercopyrightCR"><a href="#">&copy;WeTheTechies Inc. All rights reserved.</a></p>
+                </div>
+
+                <div class="footercopyright2">
+                    <p>&copy;WeTheTechies Inc. All rights reserved.</p>
+                </div>
+
+               
+            </footer>
+    
+    
+        </body>
+
+
+</html>

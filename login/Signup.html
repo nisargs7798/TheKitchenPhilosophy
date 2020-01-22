@@ -1,0 +1,173 @@
+<html>
+
+<body>
+    <script src="login.js"></script>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8" />
+        <title>
+            Sign UP
+        </title>
+
+        <link href="Sgup.css" rel="stylesheet" type="text/css" />
+        <link href="http://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+
+            $(document).ready(function () {
+
+
+
+                $("#btnSubmit").click(function () {
+                    $("#lblfname").hide();
+                    $("#lbllname").hide();
+                    $("#lblpwd").hide();
+                    $("#lblemail").hide();
+                    if ($("#txtfname").val() == "") {
+                        $("#lblfname").show();
+                    }
+                    else if ($("#txtlname").val() == "") {
+                        $("#lbllname").show();
+                    }
+                    else if ($("#txtpasswrd").val() == "") {
+                        $("#lblpwd").show();
+                    }
+                    else if ($("#txtmail").val() == "") {
+                        $("#lblemail").show();
+                    }
+
+                    else {
+                        if ($("#txtmail").val() != "") {
+                            var regex = /^([a-zA-Z0-9_>+-]+\@(([a-zA-Z0-9-]+\.)+([a-zA-Z0-9]{2,4})+$))/;
+                            if (regex.test($("#txtmail").val())) {
+                                window.location.href = 'mess.html';
+                            } else {
+                                $("#lblemail").text("Please valid Email ID");
+                                $("#lblemail").show();
+
+                            }
+
+                            //var s = regex.test($("#txtmail").val())
+                        }
+
+                    }
+                });
+                $("#txtfname").keyup(function () {
+                    $("#lblfname").hide();
+                });
+
+                $("#txtlname").keyup(function () {
+                    $("#lbllname").hide();
+                });
+
+                $("#txtpasswrd").keyup(function () {
+                    $("#lblpwd").hide();
+                });
+
+                $("#txtmail").keyup(function () {
+                    $("#lblemail").hide();
+                });
+            });
+
+        </script>
+        <style>
+            #msg {
+                visibility: hidden;
+                min-width: 250px;
+                background-color: black;
+                color: #000;
+                text-align: center;
+                border-radius: 2px;
+                padding: 16px;
+                position: fixed;
+                z-index: 1;
+                right: 30%;
+                top: 30px;
+                font-size: 17px;
+                margin-right: 30px;
+            }
+
+            #msg.show {
+                visibility: visible;
+                -webkit-animation: fadein 0.5s 2.5s;
+                animation: fadein 0.5s, fadeout 0.5s 2.5s;
+
+            }
+
+            @-webkit-keyframes fadein {
+                form {
+                    top: 0;
+                    opacity: 0;
+                }
+
+                to {
+                    top: 30px;
+                    opacity: 1;
+                }
+            }
+
+            @keyframes fadein {
+                form {
+                    top: 0;
+                    opacity: 0;
+                }
+
+                to {
+                    top: 30px;
+                    opacity: 1;
+                }
+            }
+
+            @-webkit-keyframes fadeout {
+                form {
+                    top: 30px;
+                    opacity: 1;
+                }
+
+                to {
+                    top: 0;
+                    opacity: 0;
+                }
+            }
+
+            @keyframes fadeout {
+                form {
+                    top: 30px;
+                    opacity: 1;
+                }
+
+                to {
+                    top: 0;
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+    <div class="signup">
+        <form>
+            <h2 style="color: white;">Sign Up</h2>
+            <input type="text" id="txtfname" name="fname" id="fname" placeholder="First name">
+            <br>
+            <label id="lblfname" style="display: none;">Please enter First name</label>
+            <br><br>
+            <input type="text" id="txtlname" name="lname" id="lname" placeholder="Last name">
+            <br>
+            <label id="lbllname" style="display: none;">Please enter Last name</label>
+            <br><br>
+            <input type="text" id="txtpasswrd" name="passwrd" id="passwrd" placeholder="Password">
+            <br>
+            <label id="lblpwd" style="display: none;">Please enter Password</label>
+            <br><br>
+            <input type="text" id="txtmail" name="mail" id="mail" placeholder="Email address">
+            <br>
+            <label id="lblemail" style="display: none;">Please enter Email</label>
+            <br><br>
+
+            <input type="button" id="btnSubmit" value="Sign Up"> </a>
+            <br><br>
+        </form>
+    </div>
+
+</body>
+
+</html>

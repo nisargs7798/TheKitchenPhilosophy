@@ -1,0 +1,256 @@
+/*Normalize the margin and padding as usual*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Here set the background of the home page*/
+body{
+    background-image: url(../Images/Background3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 125vh; */    
+    /* border: 2px solid purple; */  
+}
+
+                   
+main{
+    height: 88vh;
+    /* border: 2px solid blue; */
+    display: grid;
+    /* grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+    grid-template: repeat(8,11.5%)/repeat(10, 8.9%);
+    grid-gap: 1%;
+    
+}
+
+    main div{
+        grid-row: 2/8;
+        grid-column: 3/9;
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid orange; */
+        /* align-items: flex-start; */
+        justify-content: space-evenly;
+        
+    }
+
+    h1{
+        
+        /* border: 1px solid red; */
+        text-align: left;
+        font-size: 4vmax;
+        font-weight: bold;
+        color: black;
+        margin: 0 0 0 0;
+    }
+
+    main p{
+     
+        color:black;
+        font-size: 2vmax;
+        line-height: 1.8em;
+        font-weight: bold;
+        /* font-weight: bold; */
+        /* border: 1px solid red; */
+       
+    }
+
+    main div .mainimg{
+        display: flex;
+        height: 30%;
+    }
+    
+    main div div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* flex-wrap: wrap; */
+        width: 100%;
+        /* min-width: 408px; */
+    }
+        #section1{
+            
+            /* border: 1px solid rgb(29, 204, 102); */
+            background-image: url(../Images/COOKED.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0px 0px 10px 5px rgb(63, 62, 62);
+            width: 45%;
+            min-width: 185px;
+            min-height: 20vh;
+            transition: transform .7s;
+        }
+
+        #section2{
+        
+            /* border: 1px solid red; */
+            background-color: rgb(154, 176, 224);
+            background-image: url(../Images/UNCOOKED.jpg);
+            background-size: cover;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;            
+            text-decoration: none;
+            box-shadow: 0px 0px 10px 5px rgb(63, 62, 62);
+            width: 45%;
+            min-width: 185px;
+            min-height: 20vh;
+            transition: transform .8s;
+        }
+  
+        #section1:hover, #section1:focus, #section2:hover, #section2:focus{
+            transform: scale(1.25); 
+        }
+
+            main div div section h2{
+                font-size: 3vw;
+                opacity: 1;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                color: white;
+                
+            }
+
+
+
+/*For screen lager than 880px  ----PC*/
+@media only screen and (min-width: 880px) {
+                        /*header area*/
+                        #padmenu, #phonemenu{
+                            display: none;
+                        }
+
+}
+
+/*For screen from 879px to 481px ----PAD*/
+@media only screen and (max-width: 879px) and (min-width: 481px) {
+
+/*header area*/
+                        #pcmenu, #phonemenu{
+                            display: none;
+                        }
+
+                        header{
+                            height: 14vh;
+                        }
+
+                        .menu li a{
+                            font-size: 3vmax;
+                         }
+
+                         .dropdowncontent{
+                             width: 100%;
+                         }
+
+                         .dropdowncontent li a{
+                            font-size: 2vmax; 
+                        }
+
+
+                        /*main area*/
+                        main{
+                            height: 86vh;
+                        }
+                        main div{
+                                grid-row: 3/7;
+                                grid-column: 2/10;
+                        }
+
+                        main div {
+                            justify-content: space-evenly;
+                        }
+
+                        /*Here's reponsive font size*/
+
+                        main p{
+                            font-size: 2.5vmax;
+                        }
+
+                        h1{
+                            font-size: 5vmax;
+                        }
+
+                        main div div section h2{
+                            font-size: 4vw;
+                        }
+
+}
+/*For screen's width smaller than 480px  ----PHONE*/
+
+
+/*For screen's width smaller than 480px*/
+@media only screen and (max-width: 480px) {
+
+    /*main area*/
+        main{
+            grid-template-rows: 8vh 8vh 8vh 4.5vh 8vh 10vh 8vh 8vh;
+            height: 78vh;
+        }    
+
+        main div{
+            grid-row: 1/8;
+            grid-column: 1/11;
+        }
+    
+        h1{
+            margin-bottom: 3%;
+        }
+    
+        main h1{
+            margin: 2% 2% ;
+            font-size: 200%;
+        }
+
+        main p{
+            margin: 2% 2% ;
+            font-size: 2.3vmax;
+        }
+
+        /*Optimize the two images*/
+        .mainimg{
+            margin-top: 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-content: center;
+            flex-wrap: wrap;
+            height: 50vh;
+        }
+    
+        #section1{
+            width: 100%;
+            height: 45%;
+            min-height: 12vh;
+        }
+        
+        #section2{
+            width: 100%;
+            height: 45%;
+            min-height: 12vh;
+            margin-top: 3%;
+        }
+        
+        #section1:hover, #section1:focus, #section2:hover, #section2:focus{
+            transform: scale(1.1); 
+        }
+
+        main div div section h2{
+            font-size: 4vmax;
+        }
+    
+        main div{
+            padding: 0 5px;
+        }
+                      
+
+}

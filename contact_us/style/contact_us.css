@@ -1,0 +1,332 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Body has a background*/
+body{
+    background-image: url(backgroundcity.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+
+/*---------------------------------------------------Main Area--------------------------------------------------------*/
+
+/* The main part is a big grid*/
+.mainwrapper{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.7fr 9fr 2fr;
+}
+
+/*----------Social media wrapper-------------*/
+.middle{
+    text-align: center;
+    margin: auto;
+    position: static;
+    display: flex;
+    justify-content: space-evenly;
+    width: 70vw;
+    max-width: 1200px;
+    grid-row: 3/4;
+    transition: 1.5s;
+}
+/* Child class of .middle, cores: 1. basic layout 2. position 3. flex */
+.btn{
+    display: inline-block;
+    width: 10vmin;
+    height: 10vmin;
+    background: #f1f1f1;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: rgb(35, 40, 58);
+    overflow: hidden;
+    position: relative;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+/*------ pseudo : related to the social media buttons------*/
+.btn:hover, .btn:focus{
+    transform: scale(1.1);
+}
+
+
+.btn i{
+    /*line-height: 90px;*/
+    font-size: 26px;
+    transition: 0.4s linear;
+}
+
+.btn:hover i, .btn:focus i{
+    transform: scale(1.3);
+    color: #f1f1f1;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background:  #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.btn:hover::before, .btn:focus::before{
+    animation: animation 0.9s 1;
+    top: -10%;
+    left: -10%
+}
+/* The animation indicating position/direction of the animation*/
+@keyframes animation {
+    0%{
+        left: -110%;
+        top: 90%;
+    }50%{
+        left: 10%;
+        top: -30%;
+    }100%{
+        top: -10%;
+        left: -10%
+    }
+}
+
+/*-------End of Social media wrapper------------*/
+
+/* The Form part inside the main, is also a big grid; Resposive design for screen >= 480px*/
+@media only screen and (min-width: 480px) {
+main{
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(10,10%);
+    grid-template-rows: repeat(10,10%);
+    font-family: sans-serif;
+    border: 1px grey solid;
+    box-shadow: 0px 0px 10px 5px rgb(63, 62, 62);
+    width: 50vw;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 475px;   
+}
+}
+
+/*Title of form*/
+.mainheader{
+    grid-row: 1/2;
+    grid-column: 2/10;
+    font-size: 2.8vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Description of form*/
+.mainp{
+    grid-row: 2/3;
+    grid-column: 2/10;
+    font-size: 1.7vmin;
+    font-style: italic;
+    line-height: 140%;
+}
+/*Form itself*/
+.mainForm{
+    grid-row: 3/11;
+    grid-column: 2/10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.mainForm div{
+    width: 100%;
+    height: 100%;
+}
+/*Adjust font inside the form*/
+.formFirstName input, .formLastName input, .formEmail input{
+    width: 99%;
+    height: 40%;
+    font-size: 2vmin;
+} 
+
+.formRegarding select{
+    width: 100%;
+    height: 40%;
+    font-size: 2vmin;
+} 
+
+.formMessage textarea{
+    width: 100%;
+    height: 100%;
+    font-size: 2vmin;
+}
+/*---button----*/
+.formButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button{
+    width: 100%;
+    height: 50%;
+    background-color: rgb(35, 40, 58);
+    opacity: 0.95;
+    color: white;
+    font-size: 2vmin;
+    transition: transform 0.8s;
+}
+
+#button:hover{
+    background: #0d7ad0;
+    transform: scale(1.02);
+}
+/*----------------------For Pad--------------------------*/
+
+@media only screen and (max-width: 879px) and (min-width: 481px) {
+    
+    /*-------------About Font-----------------------------------*/
+    .mainheader{
+        font-size: 2.8vmax;
+    }    
+
+    .mainp{
+        font-size: 1.6vmax;
+    }
+
+    .formFirstName input, .formLastName input, .formEmail input, .formRegarding select{
+        font-size: 1.7vmax;
+    } 
+
+    .formMessage textarea{
+        font-size: 1.7vmax;
+    }
+
+    #button{
+        font-size: 1.8vmax;
+    }
+
+    .middle{
+        width: 85vw;
+        justify-content: space-between;
+    }
+
+    .btn{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/*--------------------------------For Phone-------------------------------------*/
+/*  ------------------------- Overwriting layouts above ----------------------  */
+@media only screen and (max-width: 480px) {
+
+
+    .mainwrapper{
+        grid-template-columns: 3% 94% 3%;
+        grid-template-rows: 1fr 18fr 2fr;
+    }
+    
+
+    main{
+        grid-row: 2/3;
+        grid-column: 2;
+        border: none;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .mainheader{
+        padding: 0;
+        flex-basis: 4%;
+        font-size: 4vmax;
+        align-self: flex-start;
+    }
+
+    .mainp{
+        flex-basis: 18%;
+        font-size: 2.7vmax;
+        margin-bottom: 5%;
+    }
+
+    .mainForm{
+        flex-basis: 74%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .formFirstName input, .formLastName input, .formEmail input{
+        width: 99%;
+        height: 70%;
+        font-size: 2vmax;
+    } 
+    
+    .formRegarding select{
+        width: 100%;
+        height: 70%;
+        font-size: 2vmax;
+    } 
+    
+    .formMessage textarea{
+        width: 100%;
+        height: 120%;
+        font-size: 2vmax;
+    }
+
+    #button{
+        margin-top: 7%;
+        font-size: 2vmax;
+    }
+
+    .middle{
+        width: 100vw;
+        justify-content: space-evenly;
+    }
+
+    .btn{
+        width: 70px;
+        height: 70px;
+    }
+    
+}
+
+/*Validation related css layout, mainly two parts: 1. placeholder warning when a blank detected. 2. A external warning when incorrect format detected.  3. A verified notice whenever an input is correctly filled*/
+
+#firstnamevalidation, #lastnamevalidation, #emailvalidation{
+    padding-top: 10px;
+}
+
+.EmptyWarning::-webkit-input-placeholder {
+    color: #ff0707;
+    font-size: 1.8vmin;
+    font-style: italic;
+ }
+
+ .FormatWarning {
+    color: #ff0707;
+    font-size: 1.5vmin;
+    font-style: italic;
+ }
+
+ .FormatVerified{
+    color: #00b344;
+    font-size: 1.8vmin;
+    font-style: italic;
+    font-weight: bold;
+ }
+
+
+
+
+
+
+

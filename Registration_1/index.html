@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Registration">
+        <meta name="keywords" content="Register, Register now">
+        <link rel="stylesheet" href="styles/consistant_footer.css">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+      <div id="dvImage">
+        <header class="header-fixed">
+
+          <div class="header-limiter">
+        
+                <h1><a href="../index.html">The Kitchen<span>Philosophy</span></a></h1>
+        
+            <nav>
+              <li><a href="../index.html" >Home</a></li>
+              <li><a href="../cooked_page/cookedFoodProject.html" >Cooked</a></li>
+              <li><a href="../uncooked_page/Uncooked.html">Uncooked</a></li>
+              <li><a href="../FAQs/faqs.html">FAQ's</a></li>
+              <li><a href="../contact_us/contact_us.html">Contact</a></li>
+              <li><a href="../feedback/feedback.html">Feedback</a></li>
+              <li><a href="../Registration_1/index.html"class="selected">Register Now</a></li>
+              
+            </nav>
+        
+          </div>
+        
+        </header>
+              
+        <div class="container">
+            <form>
+              <div class="row">
+                <h4>Account Registration</h4>
+                <div class="input-group input-group-icon">
+                  <input type="text" id="fName" placeholder="Full Name"/>
+                  
+                </div>
+                <div id="errorName"></div>
+                <div class="input-group input-group-icon">
+                  <input type="email" id="email" placeholder="Email Address"/>
+                  
+                </div>
+                <div id="errorEmail"></div>
+                <div class="input-group input-group-icon">
+                  <input type="password" id="password" placeholder="Password"/>
+                </div>
+                <div id="errorPassword"></div>
+              </div>
+              <div class="row">
+                <div class="col-half">
+                  <h4>Date of Birth</h4>
+                  <div class="input-group">
+                    <div class="col-third">
+                      <input type="text" placeholder="DD"/>
+                    </div>
+                    <div class="col-third">
+                      <input type="text" placeholder="MM"/>
+                    </div>
+                    <div class="col-third">
+                      <input type="text" placeholder="YYYY"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-half">
+                  <h4>Gender</h4>
+                  <div class="input-group">
+                    <input type="radio" name="gender" value="male" id="gender-male"/>
+                    <label for="gender-male">Male</label>
+                    <input type="radio" name="gender" value="female" id="gender-female"/>
+                    <label for="gender-female">Female</label>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <h4>Terms and Conditions</h4>
+                <div class="input-group">
+                  <input type="checkbox" id="terms"/>
+                  <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+                </div>
+                <p>Already have an account? <a id="loginLink" href="../login/Login.html">Login</a></p>
+
+                <input type="button" name="submit" value="Submit" id="btnSubmit"/>
+              </div>
+            </form>
+          </div>
+           <!-- ****************************Here's the consistent footer by Brad ******************************* -->
+        <footer class="footer">
+          <!--Consistent Footer - For Desktop and Pad-->
+          <div class="footerbig">
+              <!--The footer is divided into 5 column so each column has a div, inside the div there's a <p> and a <ul>-->
+
+                  <!--Part 1-->
+              <div class="footermenu footerdiv">
+                  <p>UNCOOKED</p>
+                  <ul>
+                      <li><a href="../product_description_uncooked/index.html">Mango</a></li>
+                      <li><a href="../product_description_uncooked/index.html">Salmon</a></li>
+                      <li><a href="../product_description_uncooked/index.html">Sashimi</a></li>
+                      <li><a href="../product_description_uncooked/index.html">Guacamole</a></li>
+                  </ul>  
+              </div>    
+              
+              <!--Part 2-->
+              <div class="footercooked footerdiv">
+                  <p>COOKED</p>
+                  <ul>
+                      <li><a href="../product_description_cooked/index.html">Pizza</a></li>
+                      <li><a href="../product_description_cooked/index.html">Dumplings</a></li>
+                      <li><a href="../product_description_cooked/index.html">Sweet and Sour Pork</a></li>
+                      <li><a href="../product_description_cooked/index.html">Tandoori Paneer tikka</a></li>
+                  </ul>
+              </div>
+              
+              <!--Part 3-->
+              <div class="footeruncooked footerdiv">
+                  <p>NAV</p>
+                  <ul class="footeruncooked1">         
+                      <li><a href="../FAQs/faqs.html">FAQs</a></li>
+                      <li><a href="../login/Login.html">Login</a></li>
+                      <li><a href="../terms_of_use/terms_of_use.html">Terms of Use</a></li>
+                      <li><a href="../privacy_policy/privacy_policy.html">Privacy Policy</a></li>
+                  </ul>
+                  
+                  <!--Part 4-->
+                  <ul class="footeruncooked2">
+                      <li><a href="../index.html">Home</a></li>
+                      <li><a href="../Registration_1/index.html">Register</a></li>
+                      <li><a href="../feedback/feedback.html">Feed Back</a></li>
+                      <li><a href="../contact_us/contact_us.html">Contact Us</a></li>
+                  </ul>
+              </div>      
+
+                  <!--Part 5-->
+              <div class="footerreferences footerdiv">
+                  <p>REFERENCES</p>
+                  <ul>
+                      <li><a href="http://www.google.ca">google.ca</a></li>
+                      <li><a href="https://www.wikipedia.org">wikipedia.org</a></li>
+                      <li><a href="https://nutritiondata.self.com/">lycheesonline.com</a></li>
+                      <li><a href="http://www.lycheesonline.com/">nutritiondata.self.com</a></li>
+                  </ul>
+              </div>
+          </div>
+
+
+          <!--Consistent Footer - For phone-->
+          <div class="footersmall">
+
+              <!--For phone, the footer is folded into a button. Once user click the button, the <ul> below will show up-->>
+              <div class="footerdropdown footerdiv">
+                  <button class="footerbutton footerbuttonmenu">Site Map</button>
+                  <ul class="footerfold footerfoldmenu">
+                      <li><a href="../index.html">Home</a></li>
+                      <li><a href="../cooked_page/cookedFoodProject.html">Cooked</a></li>
+                      <li><a href="../uncooked_page/Uncooked.html">Uncooked</a></li>
+                      <li><a href="../contact_us/contact_us.html">Contact Us</a></li>
+                      <li><a href="../login/Login.html">Log In</a></li>
+                      <li><a href="../feedback/feedback.html">Feedback</a></li>
+                      <li><a href="../terms_of_use/terms_of_use.html">Terms of Use</a></li>
+                      <li><a href="../privacy_policy/privacy_policy.html">Privacy Policy</a></li>
+                      <li><a href="http://www.google.ca">Ref #1:<br/>google.ca</a></li>
+                      <li><a href="https://www.wikipedia.org">Ref #2:<br/>wikipedia.org</a></li>
+                      <li><a href="https://nutritiondata.self.com/">Ref #3:<br/>nutritiondata.self.com</a></li>
+                      <li><a href="http://www.lycheesonline.com/">Ref #4:<br/>lycheesonline.com</a></li>
+                  </ul>         
+              </div>
+
+              <!--This is the script for the button - Only for phone-->
+              <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+              <script src="../consistent_footer/js/JQuery_consistant_footer.js"></script>                     
+          </div>
+
+          <!--This is the copyright for Desktop & Pad-->
+          <div class="footercopyright">
+              <p class="footercopyrightToU"><a href="../terms_of_use/terms_of_use.html">Terms of Use</a></p>
+              <p class="footercopyrightPP"><a href="../privacy_policy/privacy_policy.html">Privacy Policy</a></p>
+              <p class="footercopyrightCR"><a href="../index.html">&copy;WeTheTechies Inc. All rights reserved.</a></p>
+          </div>
+
+          <!--This is the copyright for phone-->
+          <div class="footercopyright2">
+              <p>&copy;WeTheTechies Inc. All rights reserved.</p>
+          </div>
+
+      </footer>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+          <script src="js/header.js"></script>
+          <script src="js/background.js"></script>
+          <script src="js/validate.js"></script>
+          
+      </div>
+        
+    </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>
+       feedback
+      
+    </title>
+  
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+  
+  </head>
+
+<body onload="myFunction()">
+    <script src="feedback.js"></script>
+    <script>
+      $(document).ready(function(){
+    
+        var showHeaderAt = 100;
+    
+        var win = $(window),
+            body = $('body');
+    
+        // Show the fixed header only on larger screen devices
+    
+        if(win.width() > 400){
+    
+          // When we scroll more than 150px down, we set the
+          // "fixed" class on the body element.
+    
+          win.on('scroll', function(e){
+    
+            if(win.scrollTop() > showHeaderAt) {
+              body.addClass('fixed');
+            }
+            else {
+              body.removeClass('fixed');
+            }
+          });
+    
+        }
+    
+      });
+    
+    </script>
+        <header class="header-fixed">
+          <div id="loader"></div>
+          <div class="header-limiter">
+        
+                <h1><a href="#">The Kitchen<span>Philosophy</span></a></h1>
+        
+            <nav>
+              
+              <li><a href="#" class="selected">Home</a></li>
+              <li><a href="#" >Categories</a></li>
+        
+              <li><a href="#">About</a></li>
+              <li><a href="#">FAQ's</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Feedback</a></li>
+            </nav>
+        
+          </div>
+        
+        </header>
+
+    <h1> The kitchen Philosophy </h1>
+    <h3>Feedback</h3>
+    <div class="top" >
+            <img src="images/c1.jpg" alt="Feedback" class="top">
+      </div>
+      <div style="display:none;" id="success">
+        <h2>Successfully!</h2>
+        <p>Successfully Captured Your Feedback</p>
+      </div>
+<form>
+    <div class="first">
+        <div id="quiz"></div>
+    
+<p><b><font size="5"> How Far would you recommend this Site</font></b></p>
+  <input type="radio" name="recommend" value="Strongly" onclick="save()"> Strongly Recommed<br>
+  <input type="radio" name="recommend" value="Not Really" onclick="save()"> Not Really<br>
+
+<p><b><font size="5">Ordred Food Quality</font></b></p>
+  <input type="radio" name="quality" value="Excellent" onclick="save()"> Excellent<br>
+  <input type="radio" name="quality" value="Good" onclick="save()"> Good<br>
+  <input type="radio" name="quality" value="Satisfied" onclick="save()"> Satisfied<br>  
+  <input type="radio" name="quality" value="Dissatisfied" onclick="save()"> Dissatisfied<br>  
+
+
+<p><b><font size="5">Speed of Service</font></b></p>
+  <input type="radio" name="speed" value="Excellent" onclick="save()"> Excellent<br>
+  <input type="radio" name="speed" value="Good" onclick="save()"> Good<br>
+  <input type="radio" name="speed" value="Satisfied" onclick="save()"> Satisfied<br>  
+  <input type="radio" name="speed" value="Dissatisfied" onclick="save()"> Dissatisfied<br> 
+
+  <p><b><font size="5">Order Accuracy</font></b></p>
+  <input type="radio" name="accuracy" value="Excellent" onclick="save()"> Excellent<br>
+  <input type="radio" name="accuracy" value="Good" onclick="save()"> Good<br>
+  <input type="radio" name="accuracy" value="Satisfied" onclick="save()"> Satisfied<br>  
+  <input type="radio" name="accuracy" value="Dissatisfied" onclick="save()"> Dissatisfied<br>
+
+  <p><b><font size="5">OverAll Website</font></b></p>
+  <input type="radio" name="overAll" value="Excellent" onclick="save()"> Excellent<br>
+  <input type="radio" name="overAll" value="Good" onclick="save()"> Good<br>
+  <input type="radio" name="overAll" value="Satisfied" onclick="save()"> Satisfied<br>  
+  <input type="radio" name="overAll" value="Dissatisfied" onclick="save()"> Dissatisfied<br>
+
+  <p><b><font size="5">Rate us On sacle of 10</font></b></p>
+  <input type="text">
+
+  <p><b><font size="5">Other Comments that would help to improve Our Services</font></b></p>
+  <input type="text">
+  
+  
+  <input type="submit" value="Submit">
+  </div>
+</form>
+           <!-- ****************************Here's the consistent footer by Brad ******************************* -->
+        <footer class="footer">
+          <!--Consistent Footer - For Desktop and Pad-->
+          <div class="footerbig">
+              <!--The footer is divided into 5 column so each column has a div, inside the div there's a <p> and a <ul>-->
+
+                  <!--Part 1-->
+              <div class="footermenu footerdiv">
+                  <p>UNCOOKED</p>
+                  <ul>
+                      <li><a href="../product_description_uncooked/index.html">Mango</a></li>
+                      <li><a href="../product_description_uncooked/index.html">Salmon</a></li>
+                      <li><a href="../product_description_uncooked/index.html">Sashimi</a></li>
+                      <li><a href="../product_description_uncooked/index.html">Guacamole</a></li>
+                  </ul>  
+              </div>    
+              
+              <!--Part 2-->
+              <div class="footercooked footerdiv">
+                  <p>COOKED</p>
+                  <ul>
+                      <li><a href="../product_description_cooked/index.html">Pizza</a></li>
+                      <li><a href="../product_description_cooked/index.html">Dumplings</a></li>
+                      <li><a href="../product_description_cooked/index.html">Sweet and Sour Pork</a></li>
+                      <li><a href="../product_description_cooked/index.html">Tandoori Paneer tikka</a></li>
+                  </ul>
+              </div>
+              
+              <!--Part 3-->
+              <div class="footeruncooked footerdiv">
+                  <p>NAV</p>
+                  <ul class="footeruncooked1">         
+                      <li><a href="../FAQs/faqs.html">FAQs</a></li>
+                      <li><a href="../login/Login.html">Login</a></li>
+                      <li><a href="../terms_of_use/terms_of_use.html">Terms of Use</a></li>
+                      <li><a href="../privacy_policy/privacy_policy.html">Privacy Policy</a></li>
+                  </ul>
+                  
+                  <!--Part 4-->
+                  <ul class="footeruncooked2">
+                      <li><a href="../index.html">Home</a></li>
+                      <li><a href="../Registration_1/index.html">Register</a></li>
+                      <li><a href="../feedback/feedback.html">Feed Back</a></li>
+                      <li><a href="../contact_us/contact_us.html">Contact Us</a></li>
+                  </ul>
+              </div>      
+
+                  <!--Part 5-->
+              <div class="footerreferences footerdiv">
+                  <p>REFERENCES</p>
+                  <ul>
+                      <li><a href="http://www.google.ca">google.ca</a></li>
+                      <li><a href="https://www.wikipedia.org">wikipedia.org</a></li>
+                      <li><a href="https://nutritiondata.self.com/">lycheesonline.com</a></li>
+                      <li><a href="http://www.lycheesonline.com/">nutritiondata.self.com</a></li>
+                  </ul>
+              </div>
+          </div>
+
+
+          <!--Consistent Footer - For phone-->
+          <div class="footersmall">
+
+              <!--For phone, the footer is folded into a button. Once user click the button, the <ul> below will show up-->>
+              <div class="footerdropdown footerdiv">
+                  <button class="footerbutton footerbuttonmenu">Site Map</button>
+                  <ul class="footerfold footerfoldmenu">
+                      <li><a href="../index.html">Home</a></li>
+                      <li><a href="../cooked_page/cookedFoodProject.html">Cooked</a></li>
+                      <li><a href="../uncooked_page/Uncooked.html">Uncooked</a></li>
+                      <li><a href="../contact_us/contact_us.html">Contact Us</a></li>
+                      <li><a href="../login/Login.html">Log In</a></li>
+                      <li><a href="../feedback/feedback.html">Feedback</a></li>
+                      <li><a href="../terms_of_use/terms_of_use.html">Terms of Use</a></li>
+                      <li><a href="../privacy_policy/privacy_policy.html">Privacy Policy</a></li>
+                      <li><a href="http://www.google.ca">Ref #1:<br/>google.ca</a></li>
+                      <li><a href="https://www.wikipedia.org">Ref #2:<br/>wikipedia.org</a></li>
+                      <li><a href="https://nutritiondata.self.com/">Ref #3:<br/>nutritiondata.self.com</a></li>
+                      <li><a href="http://www.lycheesonline.com/">Ref #4:<br/>lycheesonline.com</a></li>
+                  </ul>         
+              </div>
+
+              <!--This is the script for the button - Only for phone-->
+              <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+              <script src="../consistent_footer/js/JQuery_consistant_footer.js"></script>                     
+          </div>
+
+          <!--This is the copyright for Desktop & Pad-->
+          <div class="footercopyright">
+              <p class="footercopyrightToU"><a href="../terms_of_use/terms_of_use.html">Terms of Use</a></p>
+              <p class="footercopyrightPP"><a href="../privacy_policy/privacy_policy.html">Privacy Policy</a></p>
+              <p class="footercopyrightCR"><a href="../index.html">&copy;WeTheTechies Inc. All rights reserved.</a></p>
+          </div>
+
+          <!--This is the copyright for phone-->
+          <div class="footercopyright2">
+              <p>&copy;WeTheTechies Inc. All rights reserved.</p>
+          </div>
+
+      </footer>
+    
+        </body>
+
+
+
+
+
+</html>

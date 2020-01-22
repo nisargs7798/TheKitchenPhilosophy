@@ -1,0 +1,474 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: white;
+}
+
+.flex-display {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-image-block {
+  padding: 5px;
+}
+
+.center-align{
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
+#bg {
+  background-image: url(images/Background2.jpg);
+  height: 60vh;
+  width: 200vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ck {
+  background-image: url(../marykitchen/projectImages.jpeg/Burrito.jpeg);
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  color: whitesmoke;
+}
+/* 
+.mb{
+    background-image: url(../marykitchen/projectImages.jpeg/chicken\ meat\ ball.jpg);
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    color: whitesmoke;
+
+}
+*/
+.jr {
+  background-image: url(../marykitchen/projectImages.jpeg/nigerian-quick-jellof-rice-4.jpg);
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  color: whitesmoke;
+}
+
+/*
+.be{
+    background-image: url(../marykitchen/projectImages.jpeg/beanporriage.jpg);
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    color: whitesmoke;
+ 
+}
+*/
+h1 {
+  color: blue;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font: 90%;
+}
+
+@media only screen and (min-width: 481px) {
+  .footersmall {
+    display: none;
+  }
+
+  .footercopyright2 {
+    display: none;
+  }
+
+  .footerbig {
+    display: grid;
+    height: 21vh;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1.3fr 1.3fr 2fr 1.3fr;
+    text-align: center;
+    font-size: 1.5vmax;
+    background-color: rgb(24, 28, 41);
+    opacity: 0.95;
+    width: 100%;
+  }
+
+  .footercopyright:hover .footerbig {
+    display: grid;
+    height: 21vh;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1.3fr 1.3fr 2fr 1.3fr;
+    text-align: center;
+    font-size: 1.5vmax;
+    background-color: rgb(24, 28, 41);
+    opacity: 0.95;
+    width: 100%;
+  }
+
+  .footermenu {
+    grid-row: 1/6;
+    grid-column: 1;
+    height: 20vh;
+    display: grid;
+    grid-template-rows: 1.5fr 4fr;
+  }
+
+  .footercooked {
+    grid-row: 1/6;
+    grid-column: 2;
+    height: 20vh;
+    display: grid;
+    grid-template-rows: 1.5fr 4fr;
+  }
+
+  .footeruncooked {
+    grid-row: 1/6;
+    grid-column: 3;
+    height: 20vh;
+    display: grid;
+    grid-template-rows: 1.5fr 4fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footeruncooked p {
+    grid-row: 1;
+    grid-column: 1/3;
+  }
+
+  .footeruncooked1 {
+    grid-row: 2;
+    grid-column: 1/2;
+  }
+
+  .footeruncooked1 {
+    grid-row: 2;
+    grid-column: 2/3;
+  }
+
+  .footerreferences {
+    grid-column: 4;
+    grid-row: 1/6;
+    display: grid;
+    height: 20vh;
+    grid-template-rows: 1.5fr 4fr;
+  }
+
+  .footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 2vmin;
+    width: 100%;
+  }
+
+  .footer ul,
+  .footer ul li,
+  .footer ul li a {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.8vmin;
+    transition: transform 0.7s;
+    width: 100%;
+    height: 90%;
+  }
+
+  .footer ul li:hover {
+    background-color: #0d7ad0;
+    transform: scale(1.15);
+  }
+
+  .footermenu ul,
+  .footercooked ul {
+    border-right: 2px solid black;
+  }
+
+  .footerreferences ul {
+    border-left: 2px solid black;
+  }
+
+  .footercopyright {
+    /* grid-row: 6;
+            grid-column: 1/5; */
+    background-color: rgb(0, 0, 0);
+    height: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  }
+
+  .footercopyright p,
+  .footercopyright p a {
+    color: white;
+    font-size: 1.6vmin;
+  }
+
+  .footercopyrightToU,
+  .footercopyrightPP {
+    transition: transform 0.7s;
+  }
+
+  .footercopyrightToU:hover,
+  .footercopyrightPP:hover {
+    transform: scale(1.12);
+  }
+
+  .footercopyrightToU {
+    grid-column: 1;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .footercopyrightPP {
+    grid-column: 2;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .footercopyrightCR {
+    grid-column: 3;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .footerbig {
+    display: none;
+  }
+
+  .footercopyright {
+    display: none;
+  }
+
+  .footerdropdown {
+    position: relative;
+    /* transform: translate(-50%,-50%);  */
+    background-color: red;
+  }
+
+  .footerdropdown button {
+    font-family: sans-serif;
+    /* position: absolute; */
+    width: 100vw;
+    height: 5vh;
+    background: #112c42;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+  }
+
+  .footerdropdown ul {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background: #262626;
+    transform-origin: bottom;
+    transform: perspective(1000px) rotateX(90deg);
+    transition: 0.5s;
+    bottom: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footerdropdown ul.active {
+    transform: perspective(1000px) rotateX(0deg);
+  }
+
+  .footerdropdown ul li {
+    list-style: none;
+    width: 50%;
+  }
+
+  .footerdropdown ul li a {
+    display: block;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    background: #262626;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+  }
+
+  .footerdropdown ul li a:hover {
+    background: #0d7ad0;
+    transform: scale(1.25);
+  }
+
+  /*-----------------------------------------------Copyright ------------------------------------------------*/
+
+  .footercopyright2 {
+    background-color: rgb(0, 0, 0);
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+  }
+}
+
+.header-fixed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px #ccc;
+  padding: 20px 40px;
+  height: 80px;
+  color: #ffffff;
+  box-sizing: border-box;
+  top: -100px;
+
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+}
+
+.header-fixed .header-limiter {
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline;
+}
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder {
+  height: 80px;
+  display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+  float: left;
+  font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+  line-height: 40px;
+  margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+  color: #5383d3;
+}
+
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+  font: 16px Arial, Helvetica, sans-serif;
+  line-height: 40px;
+  float: right;
+}
+
+.header-fixed .header-limiter nav a {
+  display: inline-block;
+  padding: 0 5px;
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover {
+  opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+  color: #608bd2;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+  padding: 10px 40px;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+  display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+  line-height: 28px;
+  font-size: 13px;
+}
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+  .header-fixed {
+    padding: 20px 0;
+    height: 75px;
+  }
+
+  .header-fixed .header-limiter h1 {
+    float: none;
+    margin: -8px 0 10px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .header-fixed .header-limiter nav {
+    line-height: 1;
+    float: none;
+  }
+
+  .header-fixed .header-limiter nav a {
+    font-size: 13px;
+  }
+
+  body.fixed .header-fixed {
+    display: none;
+  }
+}
